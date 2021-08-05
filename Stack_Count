@@ -1,0 +1,43 @@
+class Stack:
+    def __init__(self):
+        self.__stk = []
+
+    def push(self, val):
+        self.__stk.append(val)
+
+    def pop(self):
+        val = self.__stk[-1]
+        del self.__stk[-1]
+        return val
+
+
+class CountingStack(Stack):
+    def __init__(self):
+      Stack.__init__(self)
+      self.__count = 0
+
+    def get_counter(self):
+      return self.__count
+
+    def push(self, val):
+      self.__count += 1
+      Stack.push(self, val)
+
+    def pop(self):
+      val = Stack.pop(self)
+      self.__count -= 1
+      return val
+	
+
+stk = CountingStack()
+stack_number = []
+stack_number = [item for item in input("Enter the list stack : ").split(",")]
+
+for i in (stack_number):
+    stk.push(i)
+print("Total count :{}".format(stk.get_counter()))
+
+for i in (stack_number):
+  print("Number stack moved out :{}".format(stk.pop()))
+  print("Total count :{}".format(stk.get_counter()))
+
