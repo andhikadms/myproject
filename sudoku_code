@@ -1,0 +1,206 @@
+def sudoku(coloumn1, coloumn2, coloumn3, coloumn4, coloumn5, coloumn6, coloumn7, coloumn8, coloumn9):
+  
+  result = True
+  
+  c1 = []
+  for num1 in str(coloumn1):
+    c1.append(num1)
+  if len(c1) != len(set(c1)):
+    result = False
+  else:
+    result = True
+
+  c2 = []
+  for num2 in str(coloumn2):
+    c2.append(num2)
+  if len(c2) != len(set(c1)):
+    result = False
+  else:
+    result = True
+
+  c3 = []
+  for num3 in str(coloumn3):
+    c3.append(num3)
+  if len(c3) != len(set(c3)):
+    result = False
+  else:
+    result = True
+
+  c4 = []
+  for num4 in str(coloumn4):
+    c4.append(num4)
+  if len(c4) != len(set(c4)):
+    result = False
+  else:
+    result = True  
+
+  c5 = []
+  for num5 in str(coloumn5):
+    c5.append(num5)
+  if len(c5) != len(set(c5)):
+    result = False
+  else:
+    result = True
+
+  c6 = []
+  for num6 in str(coloumn6):
+    c6.append(num6)
+  if len(c6) != len(set(c6)):
+    result = False
+  else:
+    result = True
+
+  c7 = []
+  for num7 in str(coloumn7):
+    c7.append(num7)
+  if len(c7) != len(set(c7)):
+    result = False
+  else:
+    result = True
+
+  c8 = []
+  for num8 in str(coloumn8):
+    c8.append(num8)
+  if len(c8) != len(set(c8)):
+    result = False
+  else:
+    result = True
+
+  c9 = []
+  for num9 in str(coloumn9):
+    c9.append(num9)
+  if len(c9) != len(set(c9)):
+    result = False
+  else:
+    result = True
+
+  r1 = []
+  r1.extend([c1[0], c2[0], c3[0], c4[0], c5[0], c6[0], c7[0], c8[0], c9[0]])
+  if len(r1) != len(set(r1)):
+    result = False
+  else:
+    result = True
+
+  r2 = []
+  r2.extend([c1[1], c2[1], c3[1], c4[1], c5[1], c6[1], c7[1], c8[1], c9[1]])
+  if len(r2) != len(set(r2)):
+    result = False
+  else:
+    result = True
+
+  r3 = []
+  r3.extend([c1[2], c2[2], c3[2], c4[2], c5[2], c6[2], c7[2], c8[2], c9[2]])
+  if len(r3) != len(set(r3)):
+    result = False
+  else:
+    result = True
+
+  r4 = []
+  r4.extend([c1[3], c2[3], c3[3], c4[3], c5[3], c6[3], c7[3], c8[3], c9[3]])
+  if len(r4) != len(set(r4)):
+    result = False
+  else:
+    result = True
+
+  r5 = []
+  r5.extend([c1[4], c2[4], c3[4], c4[4], c5[4], c6[4], c7[4], c8[4], c9[4]])
+  if len(r5) != len(set(r5)):
+    result = False
+  else:
+    result = True
+
+  r6 = []
+  r6.extend([c1[5], c2[5], c3[5], c4[5], c5[5], c6[5], c7[5], c8[5], c9[5]])
+  if len(r6) != len(set(r6)):
+    result = False
+  else:
+    result = True
+  
+  r7 = []
+  r7.extend([c1[6], c2[6], c3[6], c4[6], c5[6], c6[6], c7[6], c8[6], c9[6]])
+  if len(r7) != len(set(r7)):
+    result = False
+  else:
+    result = True
+
+  r8 = []
+  r8.extend([c1[7], c2[7], c3[7], c4[7], c5[7], c6[7], c7[7], c8[7], c9[7]])
+  if len(r8) != len(set(r8)):
+    result = False
+  else:
+    result = True
+
+  r9 = []
+  r9.extend([c1[8], c2[8], c3[8], c4[8], c5[8], c6[8], c7[8], c8[8], c9[8]])
+  if len(r9) != len(set(r9)):
+    result = False
+  else:
+    result = True
+
+  b1 = []
+  b1.extend([c1[0], c2[0], c3[0], c1[1], c2[1], c3[1], c1[2], c2[2], c3[2]])
+  if len(b1) != len(set(b1)):
+    result = False
+  else:
+    result = True
+
+  b2 = []
+  b2.extend([c1[3], c2[3], c3[3], c1[4], c2[4], c3[4], c1[5], c2[5], c3[5]])
+  if len(b2) != len(set(b2)):
+    result = False
+  else:
+    result = True  
+
+  b3 = []
+  b3.extend([c1[6], c2[6], c3[6], c1[7], c2[7], c3[7], c1[8], c2[8], c3[8]])
+  if len(b3) != len(set(b3)):
+    result = False
+  else:
+    result = True
+
+  b4 = []
+  b4.extend([c4[0], c5[0], c6[0], c4[1], c5[1], c6[1], c4[2], c5[2], c6[2]])
+  if len(b4) != len(set(b4)):
+    result = False
+  else:
+    result = True
+
+  b5 = []
+  b5.extend([c4[3], c5[3], c6[3], c4[4], c5[4], c6[4], c4[5], c5[5], c6[5]])
+  if len(b5) != len(set(b5)):
+    result = False
+  else:
+    result = True    
+
+  b6 = []
+  b6.extend([c4[6], c5[6], c6[6], c4[7], c5[7], c6[7], c4[8], c5[8], c6[8]])
+  if len(b6) != len(set(b6)):
+    result = False
+  else:
+    result = True
+
+  b7 = []
+  b7.extend([c7[0], c8[0], c9[0], c7[1], c8[1], c9[1], c7[2], c8[2], c9[2]])
+  if len(b7) != len(set(b7)):
+    result = False
+  else:
+    result = True
+
+  b8 = []
+  b8.extend([c7[3], c8[3], c9[3], c7[4], c8[4], c9[4], c7[5], c8[5], c9[5]])
+  if len(b8) != len(set(b8)):
+    result = False
+  else:
+    result = True
+
+  b9 = []
+  b9.extend([c7[6], c8[6], c9[6], c7[7], c8[7], c9[7], c7[8], c8[8], c9[8]])
+  if len(b9) != len(set(b9)):
+    result = False
+  else:
+    result = True
+
+  return result
+
+sudoku(295743861, 431865927, 876192543, 387459216, 612387495, 549216738, 763524189, 928671354, 154938672)
+sudoku(195743862, 431865927, 876192543, 387459216, 612387495, 549216738, 763524189, 928671354, 254938671)
